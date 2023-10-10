@@ -5,13 +5,13 @@ import Image from 'next/image';
 import randomGuyImage from '../public/randomGuy.jpg'
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { BsArrowRight } from 'react-icons/bs';
+import { BsArrowRight, BsInstagram, BsLinkedin } from 'react-icons/bs';
 import { HiDownload } from 'react-icons/hi';
 
 export default function Home() {
     const contactIconStyle = { color: "white" }
   return (
-    <section id='#home' className='mb-28 max-w-[50rem] text-center sm:mb-0'>
+    <section id='#home' className='mb-28 max-w-[50rem] text-center sm:mb-0 flex items-center justify-center flex-col'>
         
         <div className="flex items-center justify-center">
             <div className='relative'>
@@ -44,25 +44,36 @@ export default function Home() {
         initial={ {y:100,  opacity: 0} }
         animate={ {y: 0, opacity: 1} }
         transition={ {delay: 3, duration: 1} }
-         className='flex flex-wrap justify-center items-center text-center mt-4 mb-10 px-4 flex-col text-2xl sm:text-l font-medium gap-2 sm:max-w-[30rem]'>
+         className='flex flex-wrap justify-center items-center text-center mt-4 mb-4 sm:mb-10 px-4 flex-col text-xl sm:text-l font-medium 
+         gap-1 sm:gap-2 sm:max-w-[85%]'>
             <span className='font-bold'>Hello, I&apos;m <span className='font-bold'>Rafael</span>.</span> 
-            <span>I&apos;m a brazilian software developer who enjoys building <span className='italic'>web apps.</span></span> 
+            <span>I&apos;m a software developer who enjoys building <span className='italic'>web apps.</span></span> 
             <span>Currently, my focus is <span className='underline'>React (Next.js)</span></span>
 
         </motion.p>
 
-        <div className='flex flex-row max-h-min'>
-                <Link href='#contact'
-                className='bg-gray-900 text-white px-7 py-3 flex items-center justify-center gap-2 rounded-full'
-                >
-                    Contact me <BsArrowRight className='scale-2'/>
-                </Link>
+        <div className='flex flex-row sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium'>
+                <div className='flex flex-col sm:flex-row gap-2 max-w-[100%]'>
+                    <Link href='#contact'
+                    className='group bg-gray-900 text-white px-4 py-2 sm:px-7 sm:py-3 flex items-center gap-2 rounded-full
+                    outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition'
+                    >
+                        Contact me <BsArrowRight className='opacity-70 group-hover:translate-x-1 transition'/>
+                    </Link>
+
+                    <a href='#resume'
+                    className='group bg-white px-4 py-2 sm:px-7 sm:py-3 flex items-center gap-2 rounded-full
+                    outline-none focus:scale-110 hover:scale-110 active:scale-105 transition'
+                    >
+                        Download CV <HiDownload className='opacity-70 group-hover:translate-x-1 transition'/>
+                    </a>
+                </div>
+
+                <div className='flex flex-col sm:flex-row gap-2'>
+                    <a href="" className='hover:scale-110 transition'><BsInstagram /></a>
+                    <a href="" className='hover:scale-110 transition'><BsLinkedin /></a>
+                </div>
                 
-                <Link href='#resume'
-                 className='flex gap-2 font-bold items-center justify-center bg-blue-400 max-w-[30%] border-2 round-4 px-2 py-2' 
-                 >
-                    Download CV <HiDownload/>
-                </Link>
         </div>
 
     </section>
