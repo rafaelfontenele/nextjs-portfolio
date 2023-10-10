@@ -7,6 +7,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { BsArrowRight, BsInstagram, BsLinkedin } from 'react-icons/bs';
 import { HiDownload } from 'react-icons/hi';
+import { AiOutlineMail } from 'react-icons/ai'
 
 export default function Home() {
     const contactIconStyle = { color: "white" }
@@ -52,13 +53,17 @@ export default function Home() {
 
         </motion.p>
 
-        <div className='flex flex-row sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium'>
-                <div className='flex flex-col sm:flex-row gap-2 max-w-[100%]'>
+        <motion.div 
+        initial={ {opacity: 0, y: 0, scale: 0.4} }
+        animate={ {opacity: 1, y:0, scale: 1} }
+        transition={ {delay: 3.5, duration: 0.8} }
+        className='flex flex-row sm:flex-row items-center justify-center gap-2 px-4 text-lg font-medium'>
+                <div className='flex flex-col sm:flex-row gap-2 max-w-[100%] font-medium'>
                     <Link href='#contact'
                     className='group bg-gray-900 text-white px-4 py-2 sm:px-7 sm:py-3 flex items-center gap-2 rounded-full
                     outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition'
                     >
-                        Contact me <BsArrowRight className='opacity-70 group-hover:translate-x-1 transition'/>
+                        Contact me <AiOutlineMail className='display-none sm:display-full sm:opacity-70 group-hover:translate-x-1 transition'/>
                     </Link>
 
                     <a href='#resume'
@@ -69,12 +74,12 @@ export default function Home() {
                     </a>
                 </div>
 
-                <div className='flex flex-col sm:flex-row gap-2'>
-                    <a href="" className='hover:scale-110 transition'><BsInstagram /></a>
-                    <a href="" className='hover:scale-110 transition'><BsLinkedin /></a>
+                <div className='flex flex-col sm:flex-row gap-8 sm:gap-4'>
+                    <a href="" className='scale-125 focus:scale-[1.5] hover:scale-[1.5] active:scale-[1.5] transition '><BsInstagram /></a>
+                    <a href="" className='scale-125 focus:scale-[1.5] hover:scale-[1.5] active:scale-[1.5] transition'><BsLinkedin /></a>
                 </div>
                 
-        </div>
+        </motion.div>
 
     </section>
     )
