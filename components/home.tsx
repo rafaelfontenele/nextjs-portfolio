@@ -63,7 +63,7 @@ export default function Home() {
                     className='group bg-gray-900 text-white px-4 py-2 sm:px-7 sm:py-3 flex items-center gap-2 rounded-full
                     outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition'
                     >
-                        Contact me <AiOutlineMail className='display-none sm:display-full sm:opacity-70 group-hover:translate-x-1 transition'/>
+                        Contact me <AiOutlineMail className='sm:opacity-70 group-hover:translate-x-1 transition'/>
                     </Link>
 
                     <a href='#resume'
@@ -75,8 +75,8 @@ export default function Home() {
                 </div>
 
                 <div className='flex flex-col sm:flex-row gap-8 sm:gap-4'>
-                    <a href="" className='scale-125 focus:scale-[1.5] hover:scale-[1.5] active:scale-[1.5] transition '><BsInstagram /></a>
-                    <a href="" className='scale-125 focus:scale-[1.5] hover:scale-[1.5] active:scale-[1.5] transition'><BsLinkedin /></a>
+                    <a href="" className='scale-125 outline-none focus:scale-[1.5] hover:scale-[1.5] active:scale-[1.5] transition '><BsInstagram /></a>
+                    <a href="" className='scale-125 outline-none focus:scale-[1.5] hover:scale-[1.5] active:scale-[1.5] transition'><BsLinkedin /></a>
                 </div>
                 
         </motion.div>
