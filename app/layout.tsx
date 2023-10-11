@@ -2,6 +2,7 @@ import './globals.css'
 import { Inter } from 'next/font/google'
 import Header from '@/components/Header';
 import Page from '@/app/page';
+import { useEffect, useState } from 'react';
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -16,6 +17,7 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  
   return (
     <html lang="en">
       <body className={`${inter.className} bg-gray-100 text-gray-950 relative max-w-full h-[5000px] pt-[4.5rem] sm:pt-32 overflow-x-hidden`}>

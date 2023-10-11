@@ -1,12 +1,13 @@
 "use client";
 
 import React from 'react'
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { sections } from '@/lib/data'
 import Link from 'next/link'
 
-
 export default function Header() {
+  
   return (
     
     <header className='z-[999] relative'>
