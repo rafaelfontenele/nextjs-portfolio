@@ -5,11 +5,14 @@ import Image from 'next/image';
 import randomGuyImage from '../public/randomGuy.jpg'
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { BsArrowRight, BsInstagram, BsLinkedin } from 'react-icons/bs';
+import { BsLinkedin } from 'react-icons/bs';
+import { FaGithubSquare } from 'react-icons/fa'
 import { HiDownload } from 'react-icons/hi';
 import { AiOutlineMail } from 'react-icons/ai'
 
 export default function Home() {
+    const githubURL = 'https://github.com/rafaelfontenele';
+    let linkedinURL = 'https://www.linkedin.com/in/rafael-fontenele-76913216a';
     const contactIconStyle = { color: "white" }
   return (
     <section id='#home' className='mb-28 max-w-[50rem] text-center sm:mb-0 flex items-center justify-center flex-col'>
@@ -66,7 +69,7 @@ export default function Home() {
                         Contact me <AiOutlineMail className='sm:opacity-70 group-hover:translate-x-1 transition'/>
                     </Link>
 
-                    <a href='#resume'
+                    <a href='/JPG_Test.jpg' download
                     className='group bg-white px-4 py-2 sm:px-7 sm:py-3 flex items-center gap-2 rounded-full
                     outline-none focus:scale-110 hover:scale-110 active:scale-105 transition'
                     >
@@ -74,9 +77,9 @@ export default function Home() {
                     </a>
                 </div>
 
-                <div className='flex flex-col sm:flex-row gap-8 sm:gap-4'>
-                    <a href="" className='scale-125 outline-none focus:scale-[1.5] hover:scale-[1.5] active:scale-[1.5] transition '><BsInstagram /></a>
-                    <a href="" className='scale-125 outline-none focus:scale-[1.5] hover:scale-[1.5] active:scale-[1.5] transition'><BsLinkedin /></a>
+                <div className='flex flex-col sm:flex-row gap-[1.3rem] sm:gap-4'>
+                    <a target="_blank" rel="noopener noreferrer" href={githubURL} className='rounded-full bg-white w-8 h-8 flex items-center justify-center scale-125 outline-none focus:scale-[1.5] hover:scale-[1.5] active:scale-[1.5] transition '><FaGithubSquare /></a>
+                    <a target="_blank" rel="noopener noreferrer" href={linkedinURL} className='rounded-full bg-white w-8 h-8 flex items-center justify-center scale-125 outline-none focus:scale-[1.5] hover:scale-[1.5] active:scale-[1.5] transition'><BsLinkedin /></a>
                 </div>
                 
         </motion.div>
