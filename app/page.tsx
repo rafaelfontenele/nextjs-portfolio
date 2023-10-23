@@ -1,7 +1,7 @@
 "use client";
 
 import Home from '@/components/Home';
-import Divider from '@/components/Divider';
+import SectionDivider from '@/components/Section-Divider';
 import About from  '@/components/About';
 import { useEffect } from 'react';
 
@@ -12,7 +12,7 @@ export default function Page() {
     <main className='flex flex-col items-center px-4 sm:px-0'>
       
       <Home />
-      <Divider />
+      <SectionDivider />
       <About />
 
 

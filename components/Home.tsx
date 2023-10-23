@@ -78,8 +78,8 @@ export default function Home() {
                 </div>
 
                 <div className='flex flex-col sm:flex-row gap-[1.3rem] sm:gap-4'>
-                    <a target="_blank" rel="noopener noreferrer" href={githubURL} className='rounded-full bg-white w-8 h-8 flex items-center justify-center scale-125 outline-none focus:scale-[1.5] hover:scale-[1.5] active:scale-[1.5] transition '><FaGithubSquare /></a>
                     <a target="_blank" rel="noopener noreferrer" href={linkedinURL} className='rounded-full bg-white w-8 h-8 flex items-center justify-center scale-125 outline-none focus:scale-[1.5] hover:scale-[1.5] active:scale-[1.5] transition'><BsLinkedin /></a>
+                    <a target="_blank" rel="noopener noreferrer" href={githubURL} className='rounded-full bg-white w-8 h-8 flex items-center justify-center scale-125 outline-none focus:scale-[1.5] hover:scale-[1.5] active:scale-[1.5] transition '><FaGithubSquare /></a>
                 </div>
                 
         </motion.div>

@@ -3,7 +3,8 @@
 import React from 'react'
 import { motion } from 'framer-motion';
 
-export default function Divider() {
+
+export default function SectionDivider() {
   return (
 
         <motion.div
