@@ -3,7 +3,9 @@
 import Home from '@/components/Home';
 import SectionDivider from '@/components/Section-Divider';
 import About from  '@/components/About';
+import Projects from  '@/components/Projects';
 import { useEffect } from 'react';
+
 
 export default function Page() {
   
@@ -14,6 +16,7 @@ export default function Page() {
       <Home />
       <SectionDivider />
       <About />
+      <Projects />
 
 
     </main>    
