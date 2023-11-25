@@ -1,12 +1,16 @@
-import React from 'react'
+"use client"
+
+import React, { useRef } from 'react'
 import SectionHeader from '@/components/Section-Header'
 import { projectsData } from '@/lib/data'
 import Image from 'next/image'
+import { useScroll } from 'framer-motion';
+import { Project } from '@/components/Project';
 
 export default function Projects() {
   return (
 
-    <section>
+    <section className="scroll-mt-28 mb-28">
         <SectionHeader text={'Projects'} />
         <div>
           {projectsData.map( (project, index) => {
@@ -24,25 +28,4 @@ export default function Projects() {
 
 
     )
-}
-
-type ProjectProps = (typeof projectsData)[number];
-
-
-function Project({ title, description, tags, imageUrl } : ProjectProps) {
-  return (
-    <section>
-      <h3>{title}</h3>
-      <p>{description}</p>
-      <ul>
-        {tags.map( (tag, index) => (
-          <li key={index}>
-            {tag}
-          </li>
-        ))}
-      </ul>
-
-      <Image src={imageUrl} alt={title}/>
-    </section>
-  )
 }
