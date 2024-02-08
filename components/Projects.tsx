@@ -10,7 +10,9 @@ import { Project } from '@/components/Project';
 export default function Projects() {
   return (
 
-    <section className="scroll-mt-28 mb-28">
+    <section className="scroll-mt-28 mb-28"
+    id='projects'
+    >
         <SectionHeader text={'Projects'} />
         <div>
           {projectsData.map( (project, index) => {

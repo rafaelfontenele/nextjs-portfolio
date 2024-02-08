@@ -8,6 +8,8 @@ import Link from 'next/link'
 
 export default function Header() {
   
+  const { currSection, setcurrSecion } = useState('Home');
+
   return (
     
     <header className='z-[999] relative'>

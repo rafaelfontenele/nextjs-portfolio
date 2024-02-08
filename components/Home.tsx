@@ -15,7 +15,7 @@ export default function Home() {
     let linkedinURL = 'https://www.linkedin.com/in/rafael-fontenele-76913216a';
     const contactIconStyle = { color: "white" }
   return (
-    <section id='#home' className='mb-28 max-w-[50rem] text-center sm:mb-0 flex items-center justify-center flex-col'>
+    <section id='home' className='scroll-mt-[100rem] mb-28 max-w-[50rem] text-center sm:mb-0 flex items-center justify-center flex-col'>
         
         <div className="flex items-center justify-center">
             <div className='relative'>
