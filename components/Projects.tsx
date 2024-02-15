@@ -1,5 +1,3 @@
-"use client"
-
 import React, { useRef } from 'react'
 import SectionHeader from '@/components/Section-Header'
 import { projectsData } from '@/lib/data'

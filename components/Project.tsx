@@ -22,8 +22,8 @@ export function Project({
       target: ref,
       offset: ["0 1", "1.33 1"],
     });
-    const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.6, 1]);
-    const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.7, 1]);
+    const scaleProgress = useTransform(scrollYProgress, [0, 1], [0.85, 1]);
+    const opacityProgress = useTransform(scrollYProgress, [0, 1], [0.2, 1]);
 
 
   return (
@@ -37,7 +37,7 @@ export function Project({
     >
     <section     
     className='bg-gray-100 max-w-[42rem] border border-black/5 rounded-lg overflow-hidden sm:pr-8 relative sm:h-[20rem] 
-    hover:bg-gray-200 transition rounded-lg sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20 group-even:pl-8'>
+    hover:bg-gray-200 transition sm:group-even:pl-8 dark:text-white dark:bg-white/10 dark:hover:bg-white/20 group-even:pl-8'>
      
      <div className='group-even:ml-[18rem] pb-7 px-5 sm:pl-10 sm:pr-2 sm:pt-10 sm:max-w-[50%] flex flex-col h-full'>
         <h3 className='text-2xl font-semibold'>{title}</h3>
