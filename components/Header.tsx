@@ -4,13 +4,20 @@ import React from 'react'
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { sections } from '@/lib/data'
+import clsx from 'clsx';
 import Link from 'next/link'
 
 export default function Header() {
   
-  const { currSection, setcurrSecion } = useState('Home');
+  const { currSection, setcurrSection } = useState('home');
+    /* 
+    "flex w-full items-center justify-center px-3 py-3 hover:text-gray-800 transition"
+    */
 
-  return (
+    const linkClasses = `
+    flex w-full items-center justify-center px-3 py-3 hover:text-gray-800 transition
+    ${Link.name == currSection ? 'text-green-500' : ''}`
+    return (
     
     <header className='z-[999] relative'>
 
@@ -33,7 +40,11 @@ export default function Header() {
               initial={{ y: -100, opacity: 0 }}
               animate={{ y: 0, opacity: 1 }}
                >
-                <Link className='flex w-full items-center justify-center px-3 py-3 hover:text-gray-950 transition' href={section.hash}>{section.name}</Link>
+                <Link 
+                  className={linkClasses}              
+                  href={section.hash}>
+                    {section.name}
+                </Link>
               </motion.li>
             ))}
           </ul>
