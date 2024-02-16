@@ -11,7 +11,7 @@ export default function SectionDivider() {
           initial={ {opacity: 0, y: 100} } 
           animate={ {opacity: 1, y: 0} } 
           transition= { {delay: 3, duration: 0.8} }
-          className='bg-[#c8c8c8b3] my-24 h-20 w-1 rounded-full hidden sm:block'
+          className='bg-[#e5e7eb76] my-24 h-20 w-1 rounded-full hidden sm:block'
         ></motion.div>
     )
 }
@@ -20,6 +20,8 @@ export default function SectionDivider() {
 /* 
 
 prevcolor bg-[#e5e7ebb3]
+
+c8c8c8b3
 
 
 */

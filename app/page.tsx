@@ -6,11 +6,11 @@ import About from  '@/components/About';
 import Projects from  '@/components/Projects';
 import Skills from  '@/components/Skills';
 import Contact from  '@/components/Contact';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 
 
 export default function Page() {
-  
+
   return (
 
     <main className='flex flex-col items-center px-4 sm:px-0'>

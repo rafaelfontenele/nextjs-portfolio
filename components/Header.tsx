@@ -1,22 +1,19 @@
 "use client";
 
 import React from 'react'
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { sections } from '@/lib/data'
 import clsx from 'clsx';
 import Link from 'next/link'
 
+
 export default function Header() {
   
-  const { currSection, setcurrSection } = useState('home');
-    /* 
-    "flex w-full items-center justify-center px-3 py-3 hover:text-gray-800 transition"
-    */
+  const [currentSection, setCurrentSection] = useState<string>('Home');
 
-    const linkClasses = `
-    flex w-full items-center justify-center px-3 py-3 hover:text-gray-800 transition
-    ${Link.name == currSection ? 'text-green-500' : ''}`
+    const dftClasses = "flex w-full items-center justify-center px-3 py-3 hover:text-gray-800 transition";
+ 
     return (
     
     <header className='z-[999] relative'>
@@ -41,7 +38,13 @@ export default function Header() {
               animate={{ y: 0, opacity: 1 }}
                >
                 <Link 
-                  className={linkClasses}              
+                  className={clsx(
+                    "flex w-full items-center justify-center px-3 py-3 hover:text-gray-700 transition",
+                    {
+                      'text-gray-800': section.name === currentSection,
+                    }
+                  )}
+
                   href={section.hash}>
                     {section.name}
                 </Link>

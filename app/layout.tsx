@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import Header from '@/components/Header';
 import Page from '@/app/page';
 import { useEffect, useState } from 'react';
+import { setCommentRange } from 'typescript';
 
 
 const inter = Inter({ subsets: ['latin'] })
@@ -17,6 +18,8 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  
+
   
   return (
     <html lang="en" className='!scroll-smooth'>
