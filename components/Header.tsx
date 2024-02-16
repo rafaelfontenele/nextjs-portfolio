@@ -1,16 +1,17 @@
 "use client";
 
 import React from 'react'
-import { useState } from 'react';
+import { useState, useContext } from 'react';
 import { motion } from 'framer-motion';
 import { sections } from '@/lib/data'
 import clsx from 'clsx';
 import Link from 'next/link'
+import  CurrentSectionContext from '@/context/CurrentSectionContextProvider';
 
 
 export default function Header() {
-  
-  const [currentSection, setCurrentSection] = useState<string>('Home');
+    
+    const [currentSection, setCurrentSection] = useContext(CurrentSectionContext)
 
     const dftClasses = "flex w-full items-center justify-center px-3 py-3 hover:text-gray-800 transition";
  
@@ -38,15 +39,29 @@ export default function Header() {
               animate={{ y: 0, opacity: 1 }}
                >
                 <Link 
+
+                onClick={() => setCurrentSection(prev => section.name)}
                   className={clsx(
-                    "flex w-full items-center justify-center px-3 py-3 hover:text-gray-700 transition",
+                    "flex w-full items-center justify-center px-3 py-3 hover:text-gray-600 transition",
                     {
-                      'text-gray-800': section.name === currentSection,
+                      'text-gray-600': section.name === currentSection,
                     }
                   )}
 
                   href={section.hash}>
+                    {section.name === currentSection && 
+                    <motion.span
+                    layoutId='activeSection'
+                    transition={{
+                      type:'spring',
+                      stiffness: 380,
+                      damping: 30
+                    }}
+                     className='bg-gray-200 rounded-full absolute inset-0 -z-10'>
+                    </motion.span>
+                  }
                     {section.name}
+
                 </Link>
               </motion.li>
             ))}

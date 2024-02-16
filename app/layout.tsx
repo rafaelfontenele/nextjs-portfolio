@@ -1,6 +1,7 @@
 import './globals.css'
 import { Inter } from 'next/font/google'
 import Header from '@/components/Header';
+import CurrentSectionContextProvider from '@/context/CurrentSectionContextProvider'
 import Page from '@/app/page';
 import { useEffect, useState } from 'react';
 import { setCommentRange } from 'typescript';
@@ -33,9 +34,10 @@ export default function RootLayout({
         top-[-1rem] left-[-35rem] h-[32rem] w-[50rem] -z-10
         rounded-full sm:w-[68rem] md:left-[-33rem] lg:left[-28rem] xl:left-[-15rem] 2xl:left-[-5rem]'></div>
 
-
-        <Header />
-        {children}
+        <Header />  
+        <CurrentSectionContextProvider>
+          {children}
+        </CurrentSectionContextProvider>
         
         </body>
     </html>
